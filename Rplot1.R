@@ -1,4 +1,4 @@
-# Runs with the file househole_power_consumption.txt in the working folder
+# Runs with the file household_power_consumption.txt in the working folder
 # file downloaded from :
 # https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip
 dt <- read.table("household_power_consumption.txt", header = TRUE, sep =";", stringsAsFactors = FALSE)
@@ -9,9 +9,7 @@ hist(as.numeric(dt$Global_active_power),
      main ="Global Active Power",
      xlab = "Global Active Power (kilowatts)",
      ylim = c(0,1200),
-     col = "Red",
-     xaxt ="n"
+     col = "Red"
      )
-axis(1,at=c(0,2,4,6))
 dev.copy(png,file = "plot1.png",width = 480, height = 480)
 dev.off()
